@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "sans-serif";
+}
+html {
+  /* scroll-snap-type: y mandatory;
+  scroll-behavior: smooth; */
+}
+body {
+  background-color: black;
+  overflow-x: hidden;
+  width: 100vw;
+}
+.globe_container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  background-color: black;
+  flex-direction: column;
+}
+.globe {
+  border: 2px solid #1f7cff;
+  border-radius: 50%;
+  height: 140px;
+  overflow: hidden;
+  width: 140px;
+  margin-bottom: 30px;
+}
+.globe svg {
+  animation: rotation 5s linear 0s infinite;
+}
+.globe path {
+  stroke: #1f7cff;
+}
+.progress_bar {
+  width: 204px;
+  height: 10px;
+  border-radius: 50px;
+  border: 2px solid #1f7cff;
+}
+.progress_bar_internal {
+  background-color: #1f7cff;
+  width: 0px;
+  height: 8px;
+  position: absolute;
+  margin-top: 1px;
+  border-radius: 50px;
+  margin-left: 2px;
+  transition-duration: 150ms;
+}
+
+@keyframes rotation {
+  from {
+    transform: translateX(0);
+  }
+
+  from {
+    transform: translateX(-50%);
+  }
+}
+
+.webgl {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 200vh;
+}
+nav {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 13vh;
+  z-index: 2;
+}
+nav h1 {
+  color: #fafafa;
+  margin-left: 50px;
+  font-size: 2rem;
+}
+nav ul {
+  width: 40vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fafafa;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+}
+.section-1 {
+  height: 100vh;
+  width: 100vw;
+  /* scroll-snap-align: start; */
+}
+.section-2 {
+  height: 100vh;
+  width: 100vw;
+  /* scroll-snap-align: start; */
+}
+.homeText {
+  opacity: 0;
+  position: absolute;
+  color: #fafafa;
+  width: 50vw;
+  transition-duration: 300ms;
+}
+.homeText1 {
+  top: 40vh;
+  left: 5vw;
+  transform: translateX(-10vh);
+}
+.homeText2 {
+  bottom: -60vh;
+  right: 5vw;
+  transform: translateX(10vh);
+}
+.homeText p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.homeText h1 {
+  font-size: 2rem;
+}
+nav .home {
+  text-decoration: none;
+}
+.disppear {
+  animation: vanish 0.2s forwards;
+}
+@keyframes vanish {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.homeText2 h1 {
+  position: relative;
+}
+.gravity {
+  cursor: pointer;
+}
+.gravity_line {
+  left: -1px;
+  top: 18px;
+  position: absolute;
+  width: 0;
+  height: 5px;
+  background-color: blue;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.gravityHovered {
+  animation: gravityAnimation 200ms ease-in-out forwards;
+}
+@keyframes gravityAnimation {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 118px;
+  }
+}
+
+
+/*# sourceMappingURL=main.css.map*/
