@@ -150,6 +150,33 @@ nav .home {
 .homeText2 h1 {
   position: relative;
 }
+.scroll-down {
+  position: absolute;
+  top: 90vh;
+  right: 50vw;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scroll-down img {
+  width: 2.2rem;
+  filter: invert(1);
+  cursor: pointer;
+  animation: scroll-btn ease-in-out 1.5s infinite;
+}
+@keyframes scroll-btn {
+  0% {
+    transform: translateY(0);
+  }
+  65% {
+    transform: translateY(-30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .footer {
   position: absolute;
   bottom: 0;
