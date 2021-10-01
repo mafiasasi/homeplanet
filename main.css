@@ -125,7 +125,7 @@ nav ul li a {
 }
 .homeText2 {
   bottom: 40vh;
-
+  opacity: 0;
   right: 5vw;
 }
 .homeText p {
